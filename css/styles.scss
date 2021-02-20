@@ -1,0 +1,85 @@
+$colorAmarilloRgba: rgba(245, 225, 45, .6);
+$colorAmarillo: #F5E12D;
+$colorrojoRgba: rgba(196, 12, 41, .5);
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(img/dialyPlanet.jpg) #ccc;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.caja{
+    width: 22%;
+    height: 400px;
+    text-align: center;
+    background: rgba(225, 225, 255, .7);
+    margin: 250px auto;
+    box-shadow: -5px 4px 10px $colorrojoRgba;
+    padding: 10px;
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    .inicio{
+        font-size: 40px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 30px;
+        color: #0B31EE;
+        text-align: center;
+    }
+
+    .correo, .contra{
+        display: flex;
+        font-size: 18px;
+        flex-grow: 0;
+        align-self: baseline;
+    }
+
+    input[type="email"], input[type="password"]{
+        font-size: 15px;
+        width: 95%;
+        margin: 20px;
+        border: 1px solid $colorAmarillo;
+        text-align: center;
+
+        &:focus{
+            border: 1px solid #ce0d0d;
+            outline: none;
+        }
+    }
+
+    .btn{
+        font-size: 20px;
+        border: none;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 10%;
+        background: $colorAmarilloRgba;
+        
+        &:hover{
+            background: #D4B206;
+            border-radius: 15%;
+        }
+    }
+
+    .error li{
+        background: #ce0d0d;
+        font-size: 17px;
+        list-style-type: disc;
+        padding: 2px;
+    }
+    
+}
+
+
